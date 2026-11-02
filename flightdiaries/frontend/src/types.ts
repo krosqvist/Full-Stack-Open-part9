@@ -1,3 +1,9 @@
+export interface ValidationError {
+  error: {
+    message: string;
+  }[];
+}
+
 export interface DiaryEntry {
   id: number;
   date: string;
@@ -20,3 +26,5 @@ export type Visibility =
   | 'poor';
 
 export type NonSensitiveDiaryEntry = Omit<DiaryEntry, 'comment'>;
+
+export type NewDiaryEntry = Omit<DiaryEntry, 'id'>;
