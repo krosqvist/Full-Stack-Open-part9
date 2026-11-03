@@ -1,10 +1,14 @@
-POST http://localhost:3001/api/patients
+POST http://localhost:3001/api/patients/d27736ec-f723-11e9-8f0b-362b9e155667/entries
 Content-Type: application/json
 
 {
-    "name": "Tester",
-    "dateOfBirth": "1999-01-01",
-    "ssn": "010199-654B",
-    "gender": "male",
-    "occupation": "Junior Tester"
+  "description": "Occupational health check",
+  "date": "2025-10-20",
+  "specialist": "Dr. Smith",
+  "type": "OccupationalHealthcare",
+  "employerName": "Acme Ltd",
+  "sickLeave": {
+    "startDate": "2025-10-20",
+    "endDate": "2025-10-22"
+  }
 }
